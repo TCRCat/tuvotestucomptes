@@ -149,9 +149,9 @@
           }, {
             orders: $scope.orders
           });
-          $scope.loadingimage = "../../img/throbber.gif";
+          $scope.loadingimage = "/tuvotestucomptes/img/throbber.gif";
 
-          $http.get("/data/vots_per_municipi.json")
+          $http.get("/tuvotestucomptes/data/vots_per_municipi.json")
           .then(function successCallback(response) {
             $scope.gridOptions.data = response.data;
 

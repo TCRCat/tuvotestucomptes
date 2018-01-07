@@ -15,10 +15,10 @@ angular.module('tvtcResultatsApp.escons', ['ngRoute','ui.bootstrap'])
         $scope.alerts.splice(index, 1);
     };
 
-    $scope.loadingimage = "../../img/throbber.gif";
+    $scope.loadingimage = "/tuvotestucomptes/img/throbber.gif";
     $scope.escons = []
 
-    $http.get("/data/escons.json")
+    $http.get("/tuvotestucomptes/data/escons.json")
     .then(function successCallback(response) {
       $scope.escons = response.data;
       $scope.loadingimage = null;

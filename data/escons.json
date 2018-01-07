@@ -4,7 +4,7 @@
       "legend": "JxC",
       "name": "JxC",
       "colour": "#FF5B9C",
-      "seats": 34
+      "seats": 35
   },
   {
       "id": "erc",
@@ -18,14 +18,14 @@
       "legend": "CUP",
       "name": "CUP",
       "colour": "#F6E134",
-      "seats": 4
+      "seats": 5
   },
   {
       "id": "cs",
       "legend": "Cs",
       "name": "Cs",
       "colour": "#FA7515",
-      "seats": 37
+      "seats": 35
   },
   {
       "id": "psc",

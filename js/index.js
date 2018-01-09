@@ -12,13 +12,9 @@ app.config(['$routeProvider', function($routeProvider) {
   // configure our routes
   $routeProvider
 
-    // .when('/', {
-    //   templateUrl: 'views/escons/index.html',
-    //   controller: 'esconsController'
-    // })
     .when('/', {
-      templateUrl: 'views/permesa/index.html',
-      controller: 'permesaController'
+      templateUrl: 'views/escons/index.html',
+      controller: 'esconsController'
     })
 
 }]);

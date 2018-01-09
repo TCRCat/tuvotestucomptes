@@ -24,21 +24,22 @@
 	<body ng-controller="mainController">
 
 		<header>
-        <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">Tu votes, tu comptes</a>
-            </div>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li ng-class="navClass('permesa')"><i class="fa fa-home"></i><a href="#!permesa">Per mesa</a></li>
-								<li ng-class="navClass('permunicipi')"><i class="fa fa-shield"></i><a href="#!permunicipi">Per municipi</a></li>
-								<li ng-class="navClass('escons')"><i class="fa fa-comment"></i><a href="#!escons">Escons</a></li>
-
-            </ul>
-        </div>
-        </nav>
-    </header>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+							<a class="navbar-brand" href="#">
+								<span><img src="img/cdrcatalunya.jpg" width="150px" style="margin: -50px 0 -50px 0;"/></span>
+								Tu votes, tu comptes
+							</a>
+						</div>
+						<ul class="nav navbar-nav navbar-right">
+							<li ng-class="navClass('escons')"><i class="fa fa-comment"></i><a href="#!escons">Escons</a></li>
+							<li ng-class="navClass('permesa')"><i class="fa fa-home"></i><a href="#!permesa">Per mesa</a></li>
+							<li ng-class="navClass('permunicipi')"><i class="fa fa-shield"></i><a href="#!permunicipi">Per municipi</a></li>
+						</ul>
+					</div>
+				</nav>
+		</header>
 		<div class="container-fluid">
 			<div class="row">
 				<div id="main" class="col-sm-12 col-md-12 main">

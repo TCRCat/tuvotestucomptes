@@ -21,6 +21,15 @@ angular.module('tvtcResultatsApp.escons', ['ngRoute','ui.bootstrap'])
     $http.get("/tuvotestucomptes/data/escons.json")
     .then(function successCallback(response) {
       $scope.escons = response.data;
+
+      // Ignorar Dialeg
+      for (var i=0; i<$scope.escons.length; i++) {
+        if ($scope.escons[i].name == "Dialeg") {
+          $scope.escons.splice(i, 1);
+          break;
+        }
+      }
+
       $scope.loadingimage = null;
     }, function errorCallback(response) {
       if (response.status == 404) {
@@ -29,6 +38,19 @@ angular.module('tvtcResultatsApp.escons', ['ngRoute','ui.bootstrap'])
           $scope.alerts.push({type: 'danger', msg: 'Error carregant les dades d\'escons. Error: ' + response.status});
       }
       $scope.loadingimage = null;
+    });
+
+    // Carregar dades de l'estat del recompte
+    $scope.estatrecompte = {}
+    $http.get("/tuvotestucomptes/data/estat_recompte.json")
+    .then(function successCallback(response) {
+      $scope.estatrecompte = response.data;
+    }, function errorCallback(response) {
+      if (response.status == 404) {
+          $scope.escons = []
+      } else {
+          $scope.alerts.push({type: 'danger', msg: 'Error carregant les dades d\'estat del recompte. Error: ' + response.status});
+      }
     });
 
 }]);

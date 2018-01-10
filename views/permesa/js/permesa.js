@@ -91,10 +91,10 @@
               field: 'vpacma',
               displayName: 'PACMA'
             },
-            {
+            /*{
               field: 'vdialeg',
               displayName: 'Dialeg'
-            },
+            },*/
             {
               field: 'vpumjust',
               displayName: 'PUMJUST'
@@ -215,6 +215,19 @@
         };
 
         $scope.load();
+
+        // Carregar dades de l'estat del recompte
+        $scope.estatrecompte = {}
+        $http.get("/tuvotestucomptes/data/estat_recompte.json")
+        .then(function successCallback(response) {
+          $scope.estatrecompte = response.data;
+        }, function errorCallback(response) {
+          if (response.status == 404) {
+              $scope.escons = []
+          } else {
+              $scope.alerts.push({type: 'danger', msg: 'Error carregant les dades d\'estat del recompte. Error: ' + response.status});
+          }
+        });
       }
     ])
 

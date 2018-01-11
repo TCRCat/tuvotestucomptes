@@ -68,12 +68,5 @@
       "name": "PUMJUST",
       "colour": "#48BFE9",
       "seats": 0
-  },
-  {
-      "id": "dialeg",
-      "legend": "Dialeg",
-      "name": "Dialeg",
-      "colour": "#999999",
-      "seats": 0
   }
 ]

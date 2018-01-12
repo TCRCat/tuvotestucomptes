@@ -9,6 +9,11 @@ df_vots = pd.read_csv('../data/votscdr.csv',na_values="-")
 df_meses = pd.read_csv('../data/meses.csv', dtype={"COD_PROV":str})
 df_join = pd.merge(df_vots, df_meses, how='left', left_on='codimesa', right_on='CODI_MESA')
 
+df_join['COD_PROV'].fillna('-',inplace=True)
+df_join['CODI_MUNICIPI'].fillna('-',inplace=True)
+df_join['MUNICIPI'].fillna('-',inplace=True)
+df_join['COMARCA'].fillna('-',inplace=True)
+
 # Generar vots per mesa
 with open('../data/vots_per_mesa.json','w') as vots_file:
     vots_file.write(json.dumps(json.loads(df_join.to_json(orient='records')), indent=4))

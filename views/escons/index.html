@@ -47,51 +47,59 @@
       </div>
     </h2>
     <div class="row">
-      <div class="col-sm-8" style="padding-top: 60px; padding-right: 100px; padding-bottom: 60px; padding-left: 100px;">
-        <svg id="chart"></svg>
-        <script type="text/javascript">
-          // Define the div for the tooltip
-          var div = d3.select("body").append("div")
-          .attr("class", "tooltip")
-          .style("opacity", 0);
+      <div class="col-sm-8" style="padding-left: 10px;">
+        <div class="alert alert-warning">
+            Si b&eacute; &eacute;s cert que de moment els resultats no quadren amb els oficials, tamb&eacute; ho &eacute;s que la majoria de les dades que ens falten corresponen a zones amb un &agrave;mpli suport unionista. Per tant, &eacute;s probable que quan s'aconsegueixin aquestes dades, els resultats coincideixin amb els oficials.
+        </div>
+        <div id="graphic-div">
+            <svg id="chart"></svg>
+            <script type="text/javascript">
+              // Define the div for the tooltip
+              var div = d3.select("body").append("div")
+              .attr("class", "tooltip")
+              .style("opacity", 0);
+              
+              var width = window.innerWidth*0.4;
+              var height = window.innerHeight*0.4;
 
-          var width = window.innerWidth/2;
-          var height = window.innerWidth/2;
+              var draw = function () {
+                
+                d3.select("#graphic-div").style("padding-left", (window.innerWidth/8) + "px");
+                
+                var parliament = d3.parliament().width(width).height(height).innerRadiusCoef(0.4);
+                parliament.enter.fromCenter(true).smallToBig(true);
+                parliament.exit.toCenter(true).bigToSmall(true);
+                /*parliament.on("click", function(e) { console.log(e); });*/
+                parliament.on("mouseover", function(d) {
+                  div.transition()
+                      .duration(200)
+                      .style("opacity", .9);
+                  div	.html(d.party.name)
+                      .style("left", (d3.event.pageX) + "px")
+                      .style("top", (d3.event.pageY - 28) + "px");
+                });
+                parliament.on("mouseout", function(d) {
+                  div.transition()
+                      .duration(500)
+                      .style("opacity", 0);
+                });
+                var setData = function(d) {
+                    d3.select("svg").datum(d).call(parliament);
+                };
+                d3.json("/tuvotestucomptes/data/escons.json", setData);
+              }
 
-          var draw = function () {
-            var parliament = d3.parliament().width(width).height(height).innerRadiusCoef(0.4);
-            parliament.enter.fromCenter(true).smallToBig(true);
-            parliament.exit.toCenter(true).bigToSmall(true);
-            /*parliament.on("click", function(e) { console.log(e); });*/
-            parliament.on("mouseover", function(d) {
-              div.transition()
-                  .duration(200)
-                  .style("opacity", .9);
-              div	.html(d.party.name)
-                  .style("left", (d3.event.pageX) + "px")
-                  .style("top", (d3.event.pageY - 28) + "px");
-            });
-            parliament.on("mouseout", function(d) {
-              div.transition()
-                  .duration(500)
-                  .style("opacity", 0);
-            });
-            var setData = function(d) {
-                d3.select("svg").datum(d).call(parliament);
-            };
-            d3.json("/tuvotestucomptes/data/escons.json", setData);
-          }
+              // Responsive
+              d3.select(window)
+                .on("resize", function() {
+                  width = window.innerWidth*0.4;
+                  height = window.innerHeight*0.4;
+                  draw();
+                });
 
-          // Responsive
-          d3.select(window)
-            .on("resize", function() {
-              width = window.innerWidth/2;
-              height = window.innerWidth/2;
               draw();
-            });
-
-          draw();
-        </script>
+            </script>
+        </div>
       </div>
       <div class="col-sm-4">
         <table class="table table-striped">

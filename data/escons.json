@@ -4,7 +4,7 @@
       "legend": "JxC",
       "name": "JxC",
       "colour": "#FF5B9C",
-      "seats": 35
+      "seats": 34
   },
   {
       "id": "erc",
@@ -46,7 +46,7 @@
       "legend": "PP",
       "name": "PP",
       "colour": "#4F92E1",
-      "seats": 3
+      "seats": 4
   },
   {
       "id": "pacma",

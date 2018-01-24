@@ -29,6 +29,11 @@ angular.module('tvtcResultatsApp.escons', ['ngRoute','ui.bootstrap'])
           break;
         }
       }
+      
+      // Build pretty fields
+      for (var i=0; i<$scope.escons.length; i++) {
+        $scope.escons[i].vots_pretty = $scope.escons[i].vots.toLocaleString();
+      }
 
       $scope.loadingimage = null;
     }, function errorCallback(response) {

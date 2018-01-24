@@ -111,6 +111,8 @@
               <th style="width: 10px">Color</th>
               <th>Partit</th>
               <th>Escons</th>
+              <th class="text-right" header-class="'text-right'">Vots</th>
+              <th>&nbsp;</th>
             </tr>
           </thead>
           <tbody>
@@ -118,6 +120,8 @@
               <td bgcolor="{{partit.colour}}"></td>
               <td>{{ partit.name }}</td>
               <td>{{ partit.seats }}</td>
+              <td class="text-right" header-class="'text-right'">{{ partit.vots_pretty }}</td>
+              <td>&nbsp;</td>
             </tr>
           </tbody>
         </table>

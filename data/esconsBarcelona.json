@@ -4,7 +4,7 @@
       "legend": "JxC",
       "name": "JxC",
       "colour": "#FF5B9C",
-      "seats": 17
+      "seats": 16
   },
   {
       "id": "erc",
@@ -18,7 +18,7 @@
       "legend": "CUP",
       "name": "CUP",
       "colour": "#F6E134",
-      "seats": 4
+      "seats": 3
   },
   {
       "id": "cs",
@@ -39,7 +39,7 @@
       "legend": "Comuns",
       "name": "Comuns",
       "colour": "#701471",
-      "seats": 7
+      "seats": 9
   },
   {
       "id": "pp",

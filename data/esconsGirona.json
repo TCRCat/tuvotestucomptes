@@ -4,69 +4,79 @@
       "legend": "JxC",
       "name": "JxC",
       "colour": "#FF5B9C",
-      "seats": 7
+      "seats": 7,
+      "vots" : 147057
   },
   {
       "id": "erc",
       "legend": "ERC",
       "name": "ERC",
       "colour": "#F8BC4B",
-      "seats": 4
+      "seats": 4,
+      "vots": 86796
   },
   {
       "id": "cup",
       "legend": "CUP",
       "name": "CUP",
       "colour": "#F6E134",
-      "seats": 1
+      "seats": 1,
+      "vots": 21159
   },
   {
       "id": "cs",
       "legend": "Cs",
       "name": "Cs",
       "colour": "#FA7515",
-      "seats": 4
+      "seats": 4,
+      "vots": 78316
   },
   {
       "id": "psc",
       "legend": "PSC",
       "name": "PSC",
       "colour": "#C8001E",
-      "seats": 1
+      "seats": 1,
+      "vots": 34570
   },
   {
       "id": "com",
       "legend": "Comuns",
       "name": "Comuns",
       "colour": "#701471",
-      "seats": 0
+      "seats": 0,
+      "vots": 16062
   },
   {
       "id": "pp",
       "legend": "PP",
       "name": "PP",
       "colour": "#4F92E1",
-      "seats": 0
+      "seats": 0,
+      "vots": 11343
   },
   {
       "id": "pacma",
       "legend": "PACMA",
       "name": "PACMA",
       "colour": "#BAC02E",
-      "seats": 0
+      "seats": 0,
+      "vots": 2526
   },
   {
       "id": "recortes",
       "legend": "Recortes",
       "name": "Recortes",
       "colour": "#4B873E",
-      "seats": 0
+      "seats": 0,
+      "vots": 239
   },
   {
       "id": "pumj",
       "legend": "PUMJUST",
       "name": "PUMJUST",
       "colour": "#48BFE9",
-      "seats": 0
+      "seats": 0,
+      "vots": 539
   }
 ]

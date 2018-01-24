@@ -38,3 +38,11 @@ with open('../data/estat_recompte.json','w') as estat_file:
     }
     estat_file.write(json.dumps(estat_recompte, indent=4))
     print 'estat_recompte.json generat!'
+    
+# Comprovar dades
+df_vots['dif'] = df_vots[u'cens'] - (df_vots[u'vnuls'] + df_vots[u'vblancs'] + df_vots[u'verc'] + df_vots[u'vjxc'] + df_vots[u'vcup'] + df_vots[u'vpsc'] + df_vots[u'vcs'] + df_vots[u'vppc'] + df_vots[u'vcom'] + df_vots[u'vpacma'] + df_vots[u'vdialeg'] + df_vots[u'vpumjust'] + df_vots[u'vrecortes'] + df_vots[u'vfamilia'] + df_vots[u'vdn'] + df_vots[u'vpfiv'] + df_vots[u'vconver'] + df_vots[u'vunidos'] + df_vots[u'vcilus'])
+if len(df_vots[df_vots['dif']<0]):
+    print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    print "ALERTA!!! Hi ha " + str(len(df_vots[df_vots['dif']<0])) + " de " + str(len(df_vots)) + " files incorrectes. Fitxer 'incorrectes.csv' generat."
+    print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    df_vots[df_vots['dif']<0].to_csv('../data/incorrectes.csv')

@@ -5,7 +5,7 @@
       "name": "JxC",
       "colour": "#FF5B9C",
       "seats": 17,
-      "vots" : 594123
+      "vots" : 596961
   },
   {
       "id": "erc",
@@ -13,7 +13,7 @@
       "name": "ERC",
       "colour": "#F8BC4B",
       "seats": 18,
-      "vots": 645097
+      "vots": 649326
   },
   {
       "id": "cup",
@@ -21,7 +21,7 @@
       "name": "CUP",
       "colour": "#F6E134",
       "seats": 4,
-      "vots": 136395
+      "vots": 137366
   },
   {
       "id": "cs",
@@ -29,7 +29,7 @@
       "name": "Cs",
       "colour": "#FA7515",
       "seats": 23,
-      "vots": 818145
+      "vots": 823902
   },
   {
       "id": "psc",
@@ -37,7 +37,7 @@
       "name": "PSC",
       "colour": "#C8001E",
       "seats": 13,
-      "vots": 469470
+      "vots": 473547
   },
   {
       "id": "com",
@@ -45,7 +45,7 @@
       "name": "Comuns",
       "colour": "#701471",
       "seats": 7,
-      "vots": 261470
+      "vots": 263492
   },
   {
       "id": "pp",
@@ -53,7 +53,7 @@
       "name": "PP",
       "colour": "#4F92E1",
       "seats": 3,
-      "vots": 134740
+      "vots": 135363
   },
   {
       "id": "pacma",
@@ -61,7 +61,7 @@
       "name": "PACMA",
       "colour": "#BAC02E",
       "seats": 0,
-      "vots": 29393
+      "vots": 29795
   },
   {
       "id": "recortes",
@@ -69,7 +69,7 @@
       "name": "Recortes",
       "colour": "#4B873E",
       "seats": 0,
-      "vots": 16
+      "vots": 13
   },
   {
       "id": "pumj",
@@ -77,6 +77,6 @@
       "name": "PUMJUST",
       "colour": "#48BFE9",
       "seats": 0,
-      "vots": 8037
+      "vots": 8154
   }
 ]

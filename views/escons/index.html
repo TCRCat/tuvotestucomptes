@@ -50,7 +50,6 @@
       <div class="col-sm-8" style="padding-left: 10px;">
         <div class="alert alert-warning">
             <small>
-                <p style="margin: 0;">Si b&eacute; &eacute;s cert que de moment els resultats no quadren amb els oficials, tamb&eacute; ho &eacute;s que la majoria de les dades que ens falten corresponen a zones amb un &agrave;mpli suport unionista. Per tant, &eacute;s probable que quan s'aconsegueixin aquestes dades, els resultats coincideixin amb els oficials.</p>
                 <p style="margin: 0;">Aquestes dades han estat obtingudes gr&agrave;cies a la col&middot;laboraci&oacute; de milers de voluntaris particulars i tamb&eacute; de la CUP i d'ERC.</p>
             </small>
         </div>
@@ -61,14 +60,14 @@
               var div = d3.select("body").append("div")
               .attr("class", "tooltip")
               .style("opacity", 0);
-              
+
               var width = window.innerWidth*0.4;
               var height = window.innerHeight*0.4;
 
               var draw = function () {
-                
+
                 d3.select("#graphic-div").style("padding-left", (window.innerWidth/8) + "px");
-                
+
                 var parliament = d3.parliament().width(width).height(height).innerRadiusCoef(0.4);
                 parliament.enter.fromCenter(true).smallToBig(true);
                 parliament.exit.toCenter(true).bigToSmall(true);

@@ -5,6 +5,7 @@ var app = angular.module('tvtcResultatsApp', [
   'tvtcResultatsApp.escons',
   'tvtcResultatsApp.permesa',
   'tvtcResultatsApp.permunicipi',
+  'tvtcResultatsApp.mesesincorrectes',
 ]);
 
 app.config(['$routeProvider', function($routeProvider) {
